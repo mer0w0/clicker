@@ -45,7 +45,7 @@ function buyClickUpgrade() {
   if (score >= clickCost) {
     score -= clickCost;
     clickPower += 1;
-    clickCost = Math.ceil(clickCost * 1.2);
+    clickCost += 7;
     updateScore();
     alert("クリック強化したよ！");
   } else {
