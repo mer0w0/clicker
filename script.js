@@ -45,7 +45,7 @@ function buyClickUpgrade() {
   if (score >= clickCost) {
     score -= clickCost;
     clickPower += 1;
-    clickCost += 7;
+    clickCost += 2;
     updateScore();
     alert("クリック強化したよ！");
   } else {
@@ -56,7 +56,7 @@ function buyAutoClick() {
   if (score >= autoCost) {
     score -= autoCost;
     autoPower += 1;
-    autoCost = Math.ceil(autoCost * 1.2);
+    autoCost += 2;
     updateScore();
     alert("自動クリック強化したよ！");
   } else {
