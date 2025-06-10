@@ -216,3 +216,20 @@ window.addEventListener("load", () => {
   updateScore();
 });
 
+function resetGame() {
+  if (confirm("ほんとに全部リセットしちゃう？")) {
+    // 保存データを削除
+    localStorage.removeItem("saveData");
+
+    // 変数を初期値に戻す
+    score = 0;
+    clickPower = 1;
+    autoPower = 0;
+    clickCost = 10;
+    autoCost = 15;
+
+    // 表示も更新
+    updateScore();
+    alert("ゲームをリセットしたよ！");
+  }
+}
