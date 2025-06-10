@@ -70,7 +70,7 @@ function buyMaxClickUpgrade() {
   while (score >= clickCost) {
     score -= clickCost;
     clickPower += 1;
-    clickCost = Math.ceil(clickCost * 1.2);
+    clickCost += 2;
     bought++;
   }
   if (bought > 0) {
@@ -85,7 +85,7 @@ function buyMaxAutoClick() {
   while (score >= autoCost) {
     score -= autoCost;
     autoPower += 1;
-    autoCost = Math.ceil(autoCost * 1.2);
+    autoCost += 2;
     bought++;
   }
   if (bought > 0) {
