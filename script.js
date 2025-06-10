@@ -172,7 +172,6 @@ function loadYoutubeVideo() {
   youtubeFrame.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
 }
 
-// --- Google検索スクショポップアップ ---
 let googlePopupVisible = false;
 
 document.addEventListener("keydown", (e) => {
@@ -195,7 +194,7 @@ document.addEventListener("keydown", (e) => {
       popup.style.overflow = "hidden";
 
       const img = document.createElement("img");
-      img.src = "https://cdn.glitch.global/33cba64b-65d9-45bc-a6ba-c153e47fe7d3/Screenshot%202025-06-10%2009.20.51.png?v=1749515243208"; // ←必要ならここを変えてね
+      img.src = "./images/yahoo_home.png"; // ←必要ならここを変えてね
       img.style.width = "100%";
       img.style.height = "100%";
       img.style.objectFit = "cover"; // 画面にピッタリ収まるように拡大縮小
