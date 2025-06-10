@@ -1,0 +1,80 @@
+body {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #fef6ff;
+}
+
+#clickImage {
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+#clickImage:active {
+  transform: scale(0.95);
+}
+
+#storePopup, #youtubePopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid #999;
+  padding: 25px 30px;
+  width: 480px;           /* 幅広げました */
+  max-width: 90vw;        /* 画面幅に合わせて最大90% */
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  border-radius: 12px;
+}
+
+#youtubeFrame {
+  width: 440px;           /* 動画幅を大きく */
+  height: 248px;          /* 16:9比率に近く */
+  max-width: 100%;        /* 画面幅に合わせて縮小 */
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.upgradeItem {
+  margin-bottom: 15px;
+}
+
+.effect {
+  position: absolute;
+  color: #8000ff;
+  font-size: 20px;
+  font-weight: bold;
+  animation: popUp 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes popUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-40px); opacity: 0; }
+}
+
+/* ボタンデザイン */
+button {
+  background: #f5ccff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #e4b3fa;
+}
+
+/* YouTube入力欄 */
+input[type="text"] {
+  width: 90%;
+  padding: 5px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yahoo! JAPAN</title>
+  <link rel="icon" href="https://cdn.glitch.global/33cba64b-65d9-45bc-a6ba-c153e47fe7d3/k2x46WlfczXIG6H1749514908_1749514912.png?v=1749515307370" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🍆 なすびクリッカー 🍆</h1>
+  <p>なすび数: <span id="score">0</span></p>
+
+  <img id="clickImage" src="https://cdn.glitch.global/33cba64b-65d9-45bc-a6ba-c153e47fe7d3/DPVycFH0hRvRrnx1749181403_1749181410.png?v=1749513604803" alt="なすび" />
+
+  <br><br>
+  <button id="storeBtn">🛒 ストア</button>
+  <button id="youtubeBtn">📺 ヒマつぶし動画</button>
+
+  <!-- ストアのポップアップ -->
+  <div id="storePopup" class="hidden">
+    <h2>アップグレードストア</h2>
+    <p>現在のスコア: <span id="popupScore">0</span></p>
+
+    <div class="upgradeItem">
+      <p>🖱 クリック強化（+1）: <span id="clickCost">10</span></p>
+      <button onclick="buyClickUpgrade()">買う</button>
+      <button onclick="buyMaxClickUpgrade()">最大まで買う</button>
+    </div>
+
+    <div class="upgradeItem">
+      <p>⏱ 自動クリック（+1）: <span id="autoCost">15</span></p>
+      <button onclick="buyAutoClick()">買う</button>
+      <button onclick="buyMaxAutoClick()">最大まで買う</button>
+    </div>
+
+    <button onclick="closeStore()">閉じる</button>
+  </div>
+
+  <!-- YouTubeポップアップ -->
+  <div id="youtubePopup" class="hidden">
+    <h2>📺 ヒマつぶし動画</h2>
+    <input type="text" id="youtubeInput" placeholder="YouTubeのURLを貼ってね">
+    <button onclick="loadYoutubeVideo()">▶️ 再生する</button>
+    <br><br>
+    <iframe id="youtubeFrame" width="280" height="160" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <button onclick="closeYoutubePopup()">閉じる</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
